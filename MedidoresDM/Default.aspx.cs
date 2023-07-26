@@ -13,39 +13,24 @@ namespace MedidoresGR2
 {
     public partial class Default : Page
     {
+        private IMedidorDAL medidoresDAL = new MedidorDALObjetos();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (Page.IsValid)
-            {
-                try
-                {
-                    int numeroSerie = int.Parse(txtNumeroSerie.Text);
-                    string tipo = txtTipo.Text;
+            
+            Medidor medidor = new Medidor();
+            medidor.numeroSerie = Convert.ToInt32(this.txtnumeroSerie.Text.Trim());
+            medidor.tipo = this.txttipo.Text.Trim();
 
-
-                    Medidor medidor = new Medidor
-                    {
-                        NumeroSerie = numeroSerie,
-                        Tipo = tipo
-                    };
-
-
-                    IMedidorDAL medidorDAL = new MedidorDALObjetos();
-                    medidorDAL.AgregarMedidor(medidor);
-
-
-                    Response.Redirect("MostrarMedidores.aspx");
-                }
-                catch (Exception ex)
-                {
-
-                }
-            }
+            this.medidoresDAL.AgregarMedidor(medidor);
+            Response.Redirect("MostrarMedidores.aspx");
+               
+           
         }
     }
 }

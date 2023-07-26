@@ -1,4 +1,5 @@
-﻿using MedidoresModels.DAL;
+﻿using MedidoresModels;
+using MedidoresModels.DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace MedidoresDM
+namespace MedidoresGR2
 {
     public partial class MostrarMedidores : Page
     {
@@ -34,7 +35,7 @@ namespace MedidoresDM
   
             if (!string.IsNullOrEmpty(ddlTipo.SelectedValue))
             {
-                medidores = medidores.Where(m => m.Tipo == ddlTipo.SelectedValue).ToList();
+                medidores = medidores.Where(m => m.tipo == ddlTipo.SelectedValue).ToList();
             }
 
 

@@ -7,7 +7,7 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace MedidoresDM
+namespace MedidoresGR2
 {
 
 

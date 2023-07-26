@@ -6,23 +6,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-public class MedidorDALObjetos : IMedidorDAL
+namespace MedidoresModels
 {
-    private static List<Medidor> medidores = new List<Medidor>();
-
-    public List<Medidor> ObtenerMedidores()
+    public class MedidorDALObjetos : IMedidorDAL
     {
-        return medidores;
-    }
+        private MEDIDORDBEntities1 eventoDB = new MEDIDORDBEntities1();
 
-    public void AgregarMedidor(Medidor medidor)
-    {
-        if (medidores.Exists(m => m.NumeroSerie == medidor.NumeroSerie))
+        public void AgregarMedidor(Medidor medidor)
         {
-            throw new Exception("Ya existe un medidor con ese número de serie.");
+            this.eventoDB.Medidors.Add(medidor);
+            this.eventoDB.SaveChanges();
+        }
+        public void EliminarMedidor(int numeroSerie)
+        {
+            Medidor medidor = this.eventoDB.Medidors.Find(numeroSerie);
+            this.eventoDB.Medidors.Remove(medidor);
+            this.eventoDB.SaveChanges();
+        }
+        public Medidor Obtener(int numeroSerie)
+        {
+            return this.eventoDB.Medidors.Find(numeroSerie);
+
+        }
+        public List<Medidor> ObtenerMedidores()
+        {
+            return this.eventoDB.Medidors.ToList();
         }
 
-        medidores.Add(medidor);
+        public List<Medidor> ObtenerMedidores(int numeroSerie) 
+        {
+            var query = from a in this.eventoDB.Medidors where a.numeroSerie == numeroSerie select a;
+            return query.ToList();
+
+        }
+
+       
     }
 }

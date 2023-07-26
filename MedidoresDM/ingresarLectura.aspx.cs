@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace MedidoresDM
+namespace MedidoresGR2
 {
     public partial class IngresarLectura : Page
     {
@@ -26,23 +26,22 @@ namespace MedidoresDM
             {
                 try
                 {
-                    int medidorNumeroSerie = int.Parse(ddlMedidor.SelectedValue);
+                    int numeroSerie = int.Parse(ddlMedidor.SelectedValue);
                     DateTime fecha = DateTime.Parse(txtFecha.Value);
                     TimeSpan hora = TimeSpan.Parse(txtHora.Text);
                     decimal valorConsumo = decimal.Parse(txtValorConsumo.Text);
 
                     Lectura lectura = new Lectura
                     {
-                        MedidorNumeroSerie = medidorNumeroSerie,
-                        Fecha = fecha,
-                        Hora = hora,
-                        ValorConsumo = valorConsumo
+                        numeroSerie = numeroSerie,
+                        fecha = fecha,
+                        hora = hora,
+                        valorConsumo = valorConsumo
                     };
 
 
                     ILecturasDAL lecturasDAL = new LecturasDALObjetos();
                     lecturasDAL.AgregarLectura(lectura);
-
 
                     Response.Redirect("MostrarLecturas.aspx");
                 }
@@ -64,5 +63,6 @@ namespace MedidoresDM
             ddlMedidor.DataValueField = "NumeroSerie";
             ddlMedidor.DataBind();
         }
+
     }
 }

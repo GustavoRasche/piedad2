@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="MostrarMedidores.aspx.cs" Inherits="MedidoresDM.MostrarMedidores" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="MostrarMedidores.aspx.cs" Inherits="MedidoresGR2.MostrarMedidores" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Contenido" runat="server">
     <div class="container">
@@ -10,8 +10,8 @@
 
         <asp:GridView ID="gridMedidores" runat="server" CssClass="table table-striped table-bordered">
             <Columns>
-                <asp:BoundField DataField="NumeroSerie" HeaderText="Número de Serie" />
-                <asp:BoundField DataField="Tipo" HeaderText="Tipo" />
+                <asp:BoundField DataField="numeroSerie" HeaderText="Número de Serie" />
+                <asp:BoundField DataField="tipo" HeaderText="Tipo" />
 
             </Columns>
         </asp:GridView>

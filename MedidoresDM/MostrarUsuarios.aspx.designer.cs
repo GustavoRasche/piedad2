@@ -11,16 +11,16 @@ namespace MedidoresGR2
 {
 
 
-    public partial class MostrarLecturas
+    public partial class MostrarUsuarios
     {
 
         /// <summary>
-        /// Control grillaLectura.
+        /// Control grillaUsuarios.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grillaLectura;
+        protected global::System.Web.UI.WebControls.GridView grillaUsuarios;
     }
 }

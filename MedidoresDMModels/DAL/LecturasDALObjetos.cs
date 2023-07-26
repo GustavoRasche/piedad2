@@ -9,16 +9,27 @@ namespace MedidoresModels.DAL
 {
     public class LecturasDALObjetos : ILecturasDAL
     {
-        private static List<Lectura> lecturas = new List<Lectura>();
+        private MEDIDORDBEntities1 eventoDB = new MEDIDORDBEntities1();
+
 
         public List<Lectura> ObtenerLecturas()
         {
-            return lecturas;
+            return this.eventoDB.Lecturas.ToList();
         }
 
         public void AgregarLectura(Lectura lectura)
         {
-            lecturas.Add(lectura);
+            this.eventoDB.Lecturas.Add(lectura);
+            this.eventoDB.SaveChanges();
         }
+
+        public List<Lectura> Obtener(int numeroSerie)
+        {
+            var query = from lectura in this.eventoDB.Lecturas
+                        where lectura.numeroSerie == numeroSerie
+                        select lectura;
+            return query.ToList();
+        }
+
     }
 }

@@ -33,6 +33,12 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="MostrarLecturas.aspx">Mostrar Lecturas</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="AgregarUsuario.aspx">Agregar Usuario</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="MostrarUsuarios.aspx">Mostrar Usuario</a>
+                            </li>
 
                         </ul>
                     </div>

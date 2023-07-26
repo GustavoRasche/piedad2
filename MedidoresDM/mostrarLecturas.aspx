@@ -1,19 +1,17 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="MostrarLecturas.aspx.cs" Inherits="MedidoresDM.MostrarLecturas" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="MostrarLecturas.aspx.cs" Inherits="MedidoresGR2.MostrarLecturas" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Contenido" runat="server">
     <div class="container">
         <h1>Mostrar Lecturas</h1>
-        <asp:DropDownList ID="ddlMedidor" runat="server" CssClass="form-control" AppendDataBoundItems="true">
-            <asp:ListItem Text="-- Seleccione un medidor --" Value=""></asp:ListItem>
+        
 
-        </asp:DropDownList>
-
-        <asp:GridView ID="gridLecturas" runat="server" CssClass="table table-striped table-bordered">
+         <asp:GridView ID="grillaLectura" AutoGenerateColumns="false" ShowHeaderWhenEmpty="true" CssClass="table table-hover table-bordered" runat="server" EmptyDataText="No hay Registros" runat="server">
             <Columns>
-                <asp:BoundField DataField="MedidorNumeroSerie" HeaderText="Número de Serie" />
-                <asp:BoundField DataField="Fecha" HeaderText="Fecha" DataFormatString="{0:dd/MM/yyyy}" />
-                <asp:BoundField DataField="Hora" HeaderText="Hora" DataFormatString="{0:hh\\:mm}" />
-                <asp:BoundField DataField="ValorConsumo" HeaderText="Valor de Consumo" DataFormatString="{0:N2}" />
+                
+                <asp:BoundField HeaderText="Fecha" DataField="fecha" />
+                <asp:BoundField HeaderText="Hora Lectura" DataField="hora" />
+                <asp:BoundField HeaderText="Consumo" DataField="valorConsumo" />
+                <asp:BoundField HeaderText="Numero Serie Medidor" DataField="numeroSerie" />
 
             </Columns>
         </asp:GridView>

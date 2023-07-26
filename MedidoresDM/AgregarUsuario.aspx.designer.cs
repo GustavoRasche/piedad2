@@ -11,61 +11,52 @@ namespace MedidoresGR2
 {
 
 
-    public partial class Default
+    public partial class AgregarUsuario
     {
 
         /// <summary>
-        /// Control ValidationSummary1.
+        /// Control rutTXT.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
+        protected global::System.Web.UI.WebControls.TextBox rutTXT;
 
         /// <summary>
-        /// Control txtnumeroSerie.
+        /// Control nombreTXT.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtnumeroSerie;
+        protected global::System.Web.UI.WebControls.TextBox nombreTXT;
 
         /// <summary>
-        /// Control rfvnumeroSerie.
+        /// Control contrasenaTXT.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvnumeroSerie;
+        protected global::System.Web.UI.WebControls.TextBox contrasenaTXT;
 
         /// <summary>
-        /// Control txttipo.
+        /// Control correoTXT.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txttipo;
+        protected global::System.Web.UI.WebControls.TextBox correoTXT;
 
         /// <summary>
-        /// Control rfvtipo.
+        /// Control ingresaBtn.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvtipo;
-
-        /// <summary>
-        /// Control btnGuardar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGuardar;
+        protected global::System.Web.UI.WebControls.Button ingresaBtn;
     }
 }

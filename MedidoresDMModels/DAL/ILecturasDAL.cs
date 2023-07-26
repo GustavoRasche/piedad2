@@ -11,6 +11,8 @@ namespace MedidoresModels.DAL
     {
         List<Lectura> ObtenerLecturas();
         void AgregarLectura(Lectura lectura);
-        
+
+        List<Lectura> Obtener(int numeroSerie);
+
     }
 }

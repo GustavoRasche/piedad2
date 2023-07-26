@@ -10,6 +10,11 @@ namespace MedidoresModels.DAL
     public interface IMedidorDAL
     {
         List<Medidor> ObtenerMedidores();
+
+        Medidor Obtener(int numeroSerie);
+
         void AgregarMedidor(Medidor medidor);
+
+        void EliminarMedidor(int numeroSerie);
     }
 }
